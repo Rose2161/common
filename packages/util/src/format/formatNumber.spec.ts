@@ -1,8 +1,10 @@
-// Copyright 2017-2023 @polkadot/util authors & contributors
+// Copyright 2017-2024 @polkadot/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { BN } from '../bn';
-import { formatNumber } from '.';
+/// <reference types="@polkadot/dev-test/globals.d.ts" />
+
+import { BN } from '../bn/index.js';
+import { formatNumber } from './index.js';
 
 describe('formatNumber', (): void => {
   it('formats empty', (): void => {

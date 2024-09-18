@@ -1,14 +1,12 @@
 {
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "bugs": "https://github.com/polkadot-js/common/issues",
-  "contributors": [],
   "description": "Keyring management",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18"
   },
   "homepage": "https://github.com/polkadot-js/common/tree/master/packages/keyring#readme",
   "license": "Apache-2.0",
-  "maintainers": [],
   "name": "@polkadot/keyring",
   "repository": {
     "directory": "packages/keyring",
@@ -16,19 +14,19 @@
     "url": "https://github.com/polkadot-js/common.git"
   },
   "sideEffects": [
-    "./detectPackage.js",
-    "./detectPackage.cjs"
+    "./packageDetect.js",
+    "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "10.4.3-1-x",
+  "version": "13.1.2-0-x",
   "main": "index.js",
   "dependencies": {
-    "@babel/runtime": "^7.20.13",
-    "@polkadot/util": "10.4.3-1-x",
-    "@polkadot/util-crypto": "10.4.3-1-x"
+    "@polkadot/util": "13.1.2-0-x",
+    "@polkadot/util-crypto": "13.1.2-0-x",
+    "tslib": "^2.7.0"
   },
   "peerDependencies": {
-    "@polkadot/util": "10.4.3-1-x",
-    "@polkadot/util-crypto": "10.4.3-1-x"
+    "@polkadot/util": "13.1.2-0-x",
+    "@polkadot/util-crypto": "13.1.2-0-x"
   }
 }

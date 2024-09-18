@@ -1,8 +1,10 @@
-// Copyright 2017-2023 @polkadot/util authors & contributors
+// Copyright 2017-2024 @polkadot/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { BN } from '../bn';
-import { formatBalance } from '.';
+/// <reference types="@polkadot/dev-test/globals.d.ts" />
+
+import { BN } from '../bn/index.js';
+import { formatBalance } from './index.js';
 
 const FMT_DEFAULTS = {
   decimals: 0,

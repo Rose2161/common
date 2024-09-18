@@ -1,8 +1,10 @@
-// Copyright 2017-2023 @polkadot/util authors & contributors
+// Copyright 2017-2024 @polkadot/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { perf } from '../test';
-import { arrayChunk, arrayRange } from '.';
+/// <reference types="@polkadot/dev-test/globals.d.ts" />
+
+import { arrayChunk, arrayRange } from '../index.js';
+import { perf } from '../test/index.js';
 
 describe('arrayChunk', (): void => {
   it('chunks with exact', (): void => {

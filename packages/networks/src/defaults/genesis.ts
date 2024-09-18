@@ -1,12 +1,16 @@
-// Copyright 2017-2023 @polkadot/networks authors & contributors
+// Copyright 2017-2024 @polkadot/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { KnownGenesis } from '../types';
+import type { KnownGenesis } from '../types.js';
 
-// NOTE: In the case where the network was hard-spooned and multiple genesisHashes
-// are provided, it needs to be in reverse order, i.e. most-recent first, oldest
-// last. This make lookups for the current a simple genesisHash[0]
-// (See Kusama as an example)
+// In the case where the network was hard-spooned and multiple genesisHashes
+// are provided, it needs to be in reverse order, i.e. most-recent goes first,
+// oldest goes last. This make lookups for the current a simple genesisHash[0]
+// where the latest ios always the first entry (See Kusama as an example)
+//
+// IMPORTANT: Apart from the test relays, this list is limited to live parachains
+// and live production  networks. It does not and should not contain any testnets,
+// either stand-alone or connected to test relays such as Westend/Rococo
 export const knownGenesis: KnownGenesis = {
   acala: [
     '0xfc41b9bd8ef8fe53d58c7ea67c794c7ec9a73daf05e6d54b14ff6342c99ba64c'
@@ -29,9 +33,15 @@ export const knownGenesis: KnownGenesis = {
   'bifrost-kusama': [
     '0x9f28c6a68e0fc9646eff64935684f6eeeece527e37bbe1f213d22caa1d9d6bed'
   ],
+  bittensor: [
+    '0x2f0555cc76fc2840a25a6ea3b9637146806f1f44b090c175ffde2a7e5ab36c03'
+  ],
   centrifuge: [
     '0xb3db41421702df9a7fcac62b53ffeac85f7853cc4e689e0b93aeb3db18c09d82',
     '0x67dddf2673b69e5f875f6f25277495834398eafd67f492e09f3f3345e003d1b5'
+  ],
+  cere: [
+    '0x81443836a9a24caaa23f1241897d1235717535711d1d3fe24eae4fdc942c092c'
   ],
   composable: [
     '0xdaab8df776eb52ec604a5df5d388bb62a050a0aaec4556a64265b9d42755552d'
@@ -46,6 +56,12 @@ export const knownGenesis: KnownGenesis = {
   edgeware: [
     '0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b'
   ],
+  encointer: [
+    '0x7dd99936c1e9e6d1ce7d90eb6f33bea8393b4bf87677d675aa63c9cb3e8c5b5b'
+  ],
+  enjin: [
+    '0xd8761d3c88f26dc12875c00d3165f7d67243d56fc85b4cf19937601a7916e5a9'
+  ],
   equilibrium: [
     '0x6f1a800de3daff7f5e037ddf66ab22ce03ab91874debeddb1086f5f7dbd48925'
   ],
@@ -53,11 +69,15 @@ export const knownGenesis: KnownGenesis = {
     '0x9b8cefc0eb5c568b527998bdd76c184e2b76ae561be76e4667072230217ea243'
   ],
   hydradx: [
-    '0xafdc188f45c71dacbaa0b62e16a91f726c7b8699a9748cdf715459de6b7f366d', // HydraDX Parachain
+    '0xafdc188f45c71dacbaa0b62e16a91f726c7b8699a9748cdf715459de6b7f366d', // Hydration | HydraDX Parachain
     '0xd2a620c27ec5cbc5621ff9a522689895074f7cca0d08e7134a7804e1a3ba86fc', // Snakenet Gen3-1
     '0x10af6e84234477d84dc572bac0789813b254aa490767ed06fb9591191d1073f9', // Snakenet Gen3
     '0x3d75507dd46301767e601265791da1d9cb47b6ebc94e87347b635e5bf58bd047', // Snakenet Gen2
     '0x0ed32bfcab4a83517fac88f2aa7cbc2f88d3ab93be9a12b6188a036bf8a943c2' // Snakenet Gen1
+  ],
+  integritee: [
+    '0xcdedc8eadbfa209d3f207bba541e57c3c58a667b05a2e1d1e86353c9000758da', // on Kusama
+    '0xe13e7af377c64e83f95e0d70d5e5c3c01d697a84538776c5b9bbe0e7d7b6034c' // on Polkadot
   ],
   'interlay-parachain': [
     '0xbf88efe70e9e0e916416e8bed61f2b45717f517d7f3523e33c7b001e5ffcbc72'
@@ -76,14 +96,23 @@ export const knownGenesis: KnownGenesis = {
     '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636', // Kusama CC2
     '0x3fd7b9eb6a00376e5be61f01abb429ffb0b104be05eaff4d458da48fcd425baf' // Kusama CC1
   ],
+  matrixchain: [
+    '0x3af4ff48ec76d2efc8476730f423ac07e25ad48f5f4c9dc39c778b164d808615'
+  ],
   nodle: [
     '0x97da7ede98d7bad4e36b4d734b6055425a3be036da2a332ea5a7037656427a21'
   ],
   origintrail: [
     '0xe7e0962324a3b86c83404dbea483f25fb5dab4c224791c81b756cfc948006174'
   ],
+  p3d: [
+    '0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66'
+  ],
   parallel: [
     '0xe61a41c53f5dcd0beb09df93b34402aada44cb05117b71059cce40a2723a4e97'
+  ],
+  peaq: [
+    '0xd2a5d385932d1f650dae03ef8e2748983779ee342c614f80854d32b8cd8fa48c'
   ],
   pendulum: [
     '0x5d3c298622d5634ed019bf61ea4b71655030015bde9beb0d6a24743714462c86'
@@ -103,6 +132,9 @@ export const knownGenesis: KnownGenesis = {
   ],
   polymesh: [
     '0x6fbd74e5e1d0a61d52ccfe9d4adaed16dd3a7caa37c6bc4d0c2fa12e8b2f4063'
+  ],
+  quartz: [
+    '0xcd4d732201ebe5d6b014edda071c4203e16867305332301dc8d092044b28e554'
   ],
   rococo: [
     '0x6408de7737c59c238890533af25896a2c20608d8b380bb01029acb392781063e',
@@ -148,5 +180,8 @@ export const knownGenesis: KnownGenesis = {
   ],
   xxnetwork: [
     '0x50dd5d206917bf10502c68fb4d18a59fc8aa31586f4e8856b493e43544aa82aa'
+  ],
+  zeitgeist: [
+    '0x1bf2a2ecb4a868de66ea8610f2ce7c8c43706561b6476031315f6640fe38e060'
   ]
 };

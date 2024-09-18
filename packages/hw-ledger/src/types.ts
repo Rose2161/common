@@ -1,10 +1,11 @@
-// Copyright 2017-2023 @polkadot/hw-ledger authors & contributors
+// Copyright 2017-2024 @polkadot/hw-ledger authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { HexString } from '@polkadot/util/types';
 
-export type LedgerTypes = 'hid' | 'u2f' | 'webusb';
-
+/**
+ * Legacy Type that works with the `Ledger` class.
+ */
 export interface AccountOptions {
   /** The index of the account */
   account: number;
@@ -12,6 +13,11 @@ export interface AccountOptions {
   addressIndex: number;
   /** The change to apply */
   change: number;
+}
+
+export interface AccountOptionsGeneric extends AccountOptions {
+  /** Option for PolkadotGenericApp.signWithMetadata */
+  metadata: Buffer;
 }
 
 export interface LedgerAddress {
