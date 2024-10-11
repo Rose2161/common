@@ -32,7 +32,7 @@
     "@babel/runtime": "^7.20.13",
     "@noble/hashes": "1.2.0",
     "@noble/secp256k1": "1.7.1",
-    "@polkadot/networks": "10.4.3-1-x",
+    "@polkadot/networks": "3.6.1",
     "@polkadot/util": "10.4.3-1-x",
     "@polkadot/wasm-crypto": "^6.4.1",
     "@polkadot/x-bigint": "10.4.3-1-x",
