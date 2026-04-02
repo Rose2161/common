@@ -1,4 +1,6 @@
 name: Master
+permissions:
+  contents: read
 on:
   push:
     branches:
